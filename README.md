@@ -44,7 +44,7 @@ void loop()
 }
 ``` 
 
-Posteriormente transformado para POO:
+Posteriormente transformado para POO e adicionando ponteiro:
 
 ``` C++
 class Semaforo {
@@ -90,14 +90,16 @@ class Semaforo {
     }
 };
 
-Semaforo semaforo(13, 12, 11);
+// Ponteiro para o objeto Semaforo
+Semaforo *semaforo;
 
 void setup() {
-  // O construtor já define os pinos como OUTPUT
+  // Instancia o objeto dinamicamente
+  semaforo = new Semaforo(13, 12, 11);
 }
 
 void loop() {
-  semaforo.cicloCompleto();
+  semaforo->cicloCompleto();
 }
 ``` 
 
